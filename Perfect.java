@@ -12,7 +12,7 @@ public class Perfect {
 			if ( (num % i) == 0) {
 				div = div + i; 
 				String temp = "" + i; 
-				divisors += temp + "" + "+"; 
+				divisors += " " + temp + " " + "+"; 
 			}
 		}
 
