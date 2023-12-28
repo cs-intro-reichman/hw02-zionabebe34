@@ -9,7 +9,7 @@ public class DamkaBoard {
 
 
 		for (int i = 1; i <= (num * num ); i++) {
-			System.out.print(" *"); //print the pattern 
+			System.out.print("*"); //print the pattern 
 			if ( i % num == 0) {
 				System.out.println(); //down the line 
 
