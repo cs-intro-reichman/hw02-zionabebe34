@@ -5,6 +5,26 @@
  */
 public class OneOfEach {
 	public static void main (String[] args) {
-		//// Put your code here
+		int num1 = (int) (Math.random() * 2) - 1; 
+		String child = ( num1 == 2)?( "g" ):( "b" ); 
+		String res;  
+		res = res + child; 
+		int num2; 
+
+		while (true) {
+			num2 = (int) (Math.random() * 2) - 1; 
+			String newChild = (num2 == 2)?( "g" ):( "b" ); 
+			res = res + newChild; 
+			if ( num1 != num2 ){
+				break; 
+			} 
+		}
+		System.out.println(res);
+	 
 	}
-}
+
+} 
+	 
+
+
+

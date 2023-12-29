@@ -17,7 +17,7 @@ public class Perfect {
 		}
 
 		for (int k = 0; k < divisors.length() - 1; k++ ) {
-			newDiv = newDiv + divisors.charAt(k); 
+			newDiv = newDiv + divisors.charAt(k); //  
 
 		}
 
