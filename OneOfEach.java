@@ -5,21 +5,29 @@
  */
 public class OneOfEach {
 	public static void main (String[] args) {
-		int num1 = (int) (Math.random() * 2) - 1; 
-		String child = ( num1 == 2)?( "g" ):( "b" ); 
-		String res;  
-		res = res + child; 
+		int num1 = (int) (Math.random() * 2) + 1; 
+		String child = ( num1 >= 2 )?( "g" ):( "b" );  // 2 for girl 1 for boy  
+		String res = "";
+		res = res + child; // put the first child in the list  
 		int num2; 
+		int count = 1; //count the number of children in the family , 1 aleardy counted
 
-		while (true) {
-			num2 = (int) (Math.random() * 2) - 1; 
-			String newChild = (num2 == 2)?( "g" ):( "b" ); 
-			res = res + newChild; 
-			if ( num1 != num2 ){
+		while ( true ) { 
+			num2 = (int) (Math.random() * 2) + 1; 
+			String child2 = ( num2 >= 2 )?( "g" ):( "b" );
+			count++; 
+
+			if ( num1 == num2 ) {
+				 res = res + child2; 
+			} else if (num1 != num2 ) {
+				res = res + child2; 
 				break; 
-			} 
+			}
+
 		}
 		System.out.println(res);
+		System.out.println("You made it... and you now have" + " " + count + " " + "children.");
+
 	 
 	}
 
