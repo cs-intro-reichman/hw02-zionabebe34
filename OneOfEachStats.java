@@ -26,11 +26,11 @@ public class OneOfEachStats {
 		for (int i = 0; i < T; i++) {
 
 			//define the first child and add for the count
-			int num1 = ((generator.nextInt() * 2) +1) ; 
+			int num1 = (generator.nextInt(2) +1) ; 
 		    int countChild = 1; 
 
 			while (true) {
-				int num2 = ((generator.nextInt() * 2) +1); 
+				int num2 = (generator.nextInt(2)  +1); 
 
 				if (num1 == num2 ) {
 				 	countChild++; 
