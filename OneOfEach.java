@@ -8,7 +8,7 @@ public class OneOfEach {
 		int num1 = (int) (Math.random() * 2) + 1; 
 		String child = ( num1 >= 2 )?( "g" ):( "b" );  // 2 for girl 1 for boy  
 		String res = "";
-		res = res + child; // put the first child in the list  
+		res = res + child; // put the first child in the string   
 		int num2; 
 		int count = 1; //count the number of children in the family , 1 aleardy counted
 
