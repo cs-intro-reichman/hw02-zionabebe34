@@ -32,7 +32,7 @@ public class OneOfEachStats {
 
 			while (true) {
 				int num2 = (generator.nextInt(2)  + 1); 
-				System.out.println(num1 + " "  + num2 );  
+				
 
 				if (num1 == num2 ) {
 				 	countChild++;
