@@ -15,30 +15,30 @@ public class OneOfEachStats {
 		// Initailizes a random numbers generator with the given seed value
         Random generator = new Random(seed);
 
-
         double sumChild = 0; // sum of all the children for the compute the average 
-		
+
 		int twoChild = 0; 
 		int threeChild = 0; 
 		int fourorMore = 0; 
 		
 
-		for (int i = 0; i < T; i++) {
+		for (int i = 1; i < T; i++) {
 
+			int countChild = 0;
 			//define the first child and add for the count
-			double countChild = 1; 
-			int num1 = (generator.nextInt(2) + 1) ; 
-		   
+			int num1 =  generator.nextInt(2) + 1; // number between (1,2)
+			int num2 =  generator.nextInt(2) + 1;
+		    countChild = 2; 
 
-			while (true) {
-				int num2 = (generator.nextInt(2)  + 1); 
+			while ( num1 == num2 ) { 
+				num2 = generator.nextInt(2) + 1; 
+				countChild = countChild + 1;
 
-				countChild++; 
-				
-				if (num1 != num2 ) {
+				if (num1 != num2) {
 					break; 
-				}
+				} 
 			}
+
 
 			if ( countChild == 2 ) {
 				twoChild++; 
@@ -47,14 +47,18 @@ public class OneOfEachStats {
 			} else if ( countChild >=4 ) {
 				fourorMore++; 
 			}
-
-
-			sumChild += countChild;
 			
-		}
 
-		double average =  sumChild / ((double) T); 
-		System.out.println("Average:" + " " + ( sumChild / ((double) T)  ) + " " + "children to get at least one of each gender." );
+			sumChild += countChild; 
+		}
+		
+
+
+
+        
+
+		double average =  sumChild /  T; 
+		System.out.println("Average:" + " " + ( average ) + " " + "children to get at least one of each gender." );
 		System.out.println( "Number of families with 2 children:" + " " + twoChild); 
 		System.out.println( "Number of families with 3 children:" + " " + threeChild);
 		System.out.println( "Number of families with 4 children:" + " " + fourorMore);    

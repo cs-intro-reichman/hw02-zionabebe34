@@ -23,15 +23,13 @@ public class OneOfEachStats1 {
 			while (true) {
 				int num2 = (int) (Math.random() * 2) + 1; 
 
-				if (num1 == num2 ) {
-				 	countChild++;
-				 	num1 = num2;  
-				} else if  (num1 != num2 ) {
-				 	countChild++;
-				 	break; 
-				}
+				countChild++; 
 
+				if ( num1 != num2 ) {
+					break; 
+				}
 			}
+
 
 			if ( countChild == 2 ) {
 				twoChild++; 
@@ -40,11 +38,11 @@ public class OneOfEachStats1 {
 			} else if ( countChild >=4 ) {
 				fourorMore++; 
 			}
-
+			
 
 			sumChild += countChild; 
 		}
-		S
+		
 
 		double average = (double) (sumChild / T); 
 		System.out.println("Average:" + " " + ( average ) + " " + "children to get at least one of each gender." );
