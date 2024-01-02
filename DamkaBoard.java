@@ -7,13 +7,13 @@ public class DamkaBoard {
 
 	
 		for ( int i = 0; i < num; i++) { 
-			System.out.println();
 			for ( int k = 0; k < num; k++)
 				if ( i % 2 != 0 ) {
 				    System.out.print(" x"); 
 				} else {
 					System.out.print("x "); 
 				}
+				System.out.println();
 			
 		}
 
