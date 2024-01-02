@@ -29,16 +29,18 @@ public class OneOfEachStats {
 			double  num1 =  generator.nextDouble();
 			double  num2 =  generator.nextDouble();
 		    countChild = 2;
-		    boolean isTrue = (((num1 >= 0.5) == (num2 >= 0.5)) || ((num1 < 0.5) == (num2 < 0.5)) );  
 
-			while ( isTrue == true) { 
-				num2 = generator.nextDouble(); 
-				countChild++;
 
-				if ( isTrue != false) {
-					break; 
-				} 
-			}
+		    while ( ((num1 >= 0.5) && (num2 >= 0.5)) || ((num1 < 0.5) && (num2 < 0.5)) ) {
+		    	num2 = generator.nextDouble(); 
+		    	countChild++;
+
+		    }
+
+
+		   
+
+			
 
 
 			if ( countChild == 2 ) {
