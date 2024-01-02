@@ -61,17 +61,17 @@ public class OneOfEachStats {
         
 
 		double average =  sumChild /  T; 
-		System.out.println("Average:" + " " + ( average ) + " " + "children to get at least one of each gender." );
-		System.out.println( "Number of families with 2 children:" + " " + twoChild); 
-		System.out.println( "Number of families with 3 children:" + " " + threeChild);
-		System.out.println( "Number of families with 4 children:" + " " + fourorMore);    
+		System.out.println("Average:" + "" + ( average ) + " " + "children to get at least one of each gender." );
+		System.out.println( "Number of families with 2 children:" + "" + twoChild); 
+		System.out.println( "Number of families with 3 children:" + "" + threeChild);
+		System.out.println( "Number of families with 4 children:" + "" + fourorMore);    
 
 		if ( twoChild > threeChild && twoChild > fourorMore) {
-			System.out.println("The most common number of children is 2.");
+			System.out.println("The most common number of children is  2.");
 		} else if (threeChild > fourorMore && threeChild > twoChild) {
-			System.out.println("The most common number of children is 3.");
+			System.out.println("The most common number of children is  3.");
 		} else if (fourorMore > threeChild && fourorMore > twoChild) {
-			System.out.println("The most common number of children is 4.");
+			System.out.println("The most common number of children is  4.");
 		}
 		
 		//// In the previous version of this program, you used a statement like:
