@@ -28,11 +28,11 @@ public class OneOfEachStats {
 			//define the first child and add for the count
 			double  num1 =  generator.nextDouble();
 			double  num2 =  generator.nextDouble();
-		    countChild = 2;
+		    countChild = 2; // the minimum of the children in the family(i defined them before in num1 and num2)
 
 
 		    while ( ((num1 >= 0.5) && (num2 >= 0.5)) || ((num1 < 0.5) && (num2 < 0.5)) ) {
-		    	num2 = generator.nextDouble(); 
+		    	num2 = generator.nextDouble(); // as long as they equals , keep generating a new child and add to the count
 		    	countChild++;
 
 		    }
@@ -42,7 +42,7 @@ public class OneOfEachStats {
 
 			
 
-
+            // check how much children the family have
 			if ( countChild == 2 ) {
 				twoChild++; 
 			} else if ( countChild == 3 ) {
