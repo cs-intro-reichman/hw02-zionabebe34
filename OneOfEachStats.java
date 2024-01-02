@@ -10,7 +10,7 @@ import java.util.Random;
 public class OneOfEachStats {
 	public static void main (String[] args) {
 		// Gets the two command-line arguments
-		int T = Integer.parseInt(args[0]);
+		int T = Integer.parseInt(args[0]); // number of families 
 		int seed = Integer.parseInt(args[1]);
 		// Initailizes a random numbers generator with the given seed value
         Random generator = new Random(seed);
@@ -22,19 +22,20 @@ public class OneOfEachStats {
 		int fourorMore = 0; 
 		
 
-		for (int i = 1; i < T; i++) {
+		for (int i = 0; i < T; i++) {
 
 			int countChild = 0;
 			//define the first child and add for the count
-			int num1 =  generator.nextInt(2) + 1; // number between (1,2)
-			int num2 =  generator.nextInt(2) + 1;
-		    countChild = 2; 
+			double  num1 =  generator.nextDouble();
+			double  num2 =  generator.nextDouble();
+		    countChild = 2;
+		    boolean isTrue = (((num1 >= 0.5) == (num2 >= 0.5)) || ((num1 < 0.5) == (num2 < 0.5)) );  
 
-			while ( num1 == num2 ) { 
-				num2 = generator.nextInt(2) + 1; 
-				countChild = countChild + 1;
+			while ( isTrue == true) { 
+				num2 = generator.nextDouble(); 
+				countChild++;
 
-				if (num1 != num2) {
+				if ( isTrue != false) {
 					break; 
 				} 
 			}
@@ -49,7 +50,7 @@ public class OneOfEachStats {
 			}
 			
 
-			sumChild += countChild; 
+			sumChild = sumChild + countChild; 
 		}
 		
 
