@@ -32,14 +32,11 @@ public class OneOfEachStats {
 
 			while (true) {
 				int num2 = (generator.nextInt(2)  + 1); 
-				
 
-				if (num1 == num2 ) {
-				 	countChild++;
-				 	
-				} else if  (num1 != num2 ) {
-				 	countChild++;
-				 	break;
+				countChild++; 
+				
+				if (num1 != num2 ) {
+					break; 
 				}
 			}
 
@@ -56,8 +53,8 @@ public class OneOfEachStats {
 			
 		}
 
-		double average =  sumChild / T; 
-		System.out.println("Average:" + " " + ( average -0.2 ) + " " + "children to get at least one of each gender." );
+		double average =  sumChild / ((double) T); 
+		System.out.println("Average:" + " " + ( sumChild / ((double) T)  ) + " " + "children to get at least one of each gender." );
 		System.out.println( "Number of families with 2 children:" + " " + twoChild); 
 		System.out.println( "Number of families with 3 children:" + " " + threeChild);
 		System.out.println( "Number of families with 4 children:" + " " + fourorMore);    
