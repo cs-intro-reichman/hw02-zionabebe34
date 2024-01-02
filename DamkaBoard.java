@@ -9,9 +9,9 @@ public class DamkaBoard {
 		for ( int i = 0; i < num; i++) { 
 			for ( int k = 0; k < num; k++)
 				if ( i % 2 != 0 ) {
-				    System.out.print(" x"); 
+				    System.out.print(" *"); 
 				} else {
-					System.out.print("x "); 
+					System.out.print("* "); 
 				}
 				System.out.println();
 			
