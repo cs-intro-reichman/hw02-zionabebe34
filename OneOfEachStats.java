@@ -17,9 +17,9 @@ public class OneOfEachStats {
 
         double sumChild = 0; // sum of all the children for the compute the average 
 
-		int twoChild = 0; 
-		int threeChild = 0; 
-		int fourorMore = 0; 
+		int twoChild =0; 
+		int threeChild =0; 
+		int fourorMore =0; 
 		
 
 		for (int i = 0; i < T; i++) {
